@@ -1,7 +1,5 @@
 ##MyExpenses
 
-For access to this application, please contact michael.watson@xamarin.com to be added.
-
 MyExpenses is a Xamarin.Forms application that was designed to display a wide range of mobile techniques that create a end-to-end mobile solution. The following peices are leveraged in the application:
 
 * Xamarin.Forms - iOS and Android applications available
