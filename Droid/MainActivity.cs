@@ -26,12 +26,12 @@ namespace MyExpenses.Droid
 			};
 
 			#if DEBUG
-			Xamarin.Insights.Initialize ("57537a140ed91deb4f55af4bf8a1b43225b9f60e", ApplicationContext);
+			Xamarin.Insights.Initialize ("Debug Insights Key", ApplicationContext);
 			#else 
-			Xamarin.Insights.Initialize ("e71401a46c7717ba1e6de93c0e3abda24c46b516", ApplicationContext);
+			Xamarin.Insights.Initialize ("Release Insights Key", ApplicationContext);
 			#endif
 
-//			global::Xamarin.Forms.Forms.Init (this, bundle);
+			global::Xamarin.Forms.Forms.Init (this, bundle);
 
 			Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) => {
 				if (!string.IsNullOrWhiteSpace(e.View.StyleId)) {
@@ -39,8 +39,8 @@ namespace MyExpenses.Droid
 				}
 			};
 
-//			BlobCache.ApplicationName = "MyExpenses";
-//			BlobCache.EnsureInitialized();
+			BlobCache.ApplicationName = "MyExpenses";
+			BlobCache.EnsureInitialized();
 
 			int densityDpi = (int)(Resources.DisplayMetrics.Density * 160f);
 			Console.WriteLine ("DPI: " + densityDpi);

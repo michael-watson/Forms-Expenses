@@ -18,9 +18,9 @@ namespace MyExpenses.iOS
 			};
 
 			#if DEBUG
-			Xamarin.Insights.Initialize ("57537a140ed91deb4f55af4bf8a1b43225b9f60e");
+			Xamarin.Insights.Initialize ("Debug API key");
 			#else 
-			Xamarin.Insights.Initialize ("e71401a46c7717ba1e6de93c0e3abda24c46b516");
+			Xamarin.Insights.Initialize ("Release API key");
 			#endif
 			// if you want to use a different Application Delegate class from "AppDelegate"
 			// you can specify it here.
