@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MyExpenses.App">
+
+	<Application.Resources>
+		<ResourceDictionary>e
+			<Style x:Key="whiteTextLabel" TargetType="Label">
+				<Setter Property="FontFamily">
+					<Setter.Value>
+						<OnPlatform x:TypeArguments="x:String"
+							iOS="AppleSDGothicNeo-Light"
+							Android="Droid Sans Mono"
+							WinPhone="Comic Sans MS"
+						/>
+					</Setter.Value>
+				</Setter>
+				<Setter Property="TextColor" Value="White"/>
+			</Style>
+
+			<Style x:Key="expenseDatePicker" TargetType="DatePicker">
+				<Setter Property="Format" Value="M/d/yyyy"/>
+				<Setter Property="HeightRequest" Value="40"/>
+			</Style>
+
+			<Style x:Key="underlinedEntry" TargetType="Entry">
+				<Setter Property="BackgroundColor" Value="Transparent"/>
+				<Setter Property="HeightRequest" Value="40"/>
+				<Setter Property="TextColor" Value="White"/>
+				<Setter Property="PlaceholderColor" Value="White"/>
+			</Style>
+
+			<Style x:Key="basicButton" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="Transparent"/>
+				<Setter Property="TextColor" Value="White"/>
+				<Setter Property="FontSize" Value="18"/>
+				<Setter Property="FontFamily">
+					<Setter.Value>
+						<OnPlatform x:TypeArguments="x:String"
+							iOS="AppleSDGothicNeo-Light"
+							Android="Droid Sans Mono"
+							WinPhone="Comic Sans MS"
+						/>
+					</Setter.Value>
+				</Setter>
+			</Style>
+
+			<Style x:Key="borderedButton" TargetType="Button" BasedOn="{StaticResource basicButton}">
+				<Setter Property="BorderRadius" Value="3"/>
+				<Setter Property="BorderColor" Value="White"/>
+				<Setter Property="BorderWidth" Value="1"/>
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+
+</Application>
