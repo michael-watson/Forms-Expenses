@@ -174,8 +174,6 @@
     <BundleResource Include="Resources\ic_insert_photo_white_48dp.png" />
     <BundleResource Include="Resources\ic_insert_photo_white_48dp%402x.png" />
     <BundleResource Include="Resources\ic_insert_photo_white_48dp%403x.png" />
-    <BundleResource Include="Resources\image1.jpg" Condition="'$(Configuration)'='Debug'" />
-    <BundleResource Include="Resources\image2.jpg" Condition="'$(Configuration)'='Debug'" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
