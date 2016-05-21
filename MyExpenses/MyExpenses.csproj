@@ -105,4 +105,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyLoginUI\MyLoginUI\MyLoginUI.csproj">
+      <Project>{6E1B18A4-C150-4627-96FF-741A8AE36F58}</Project>
+      <Name>MyLoginUI</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
