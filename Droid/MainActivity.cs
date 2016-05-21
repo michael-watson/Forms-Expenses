@@ -19,6 +19,10 @@ namespace MyExpenses.Droid
 		{
 			base.OnCreate (bundle);
 
+			//Need https://bugzilla.xamarin.com/show_bug.cgi?id=36907 to be resolved for AppCompatActivityjason
+			FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
+			FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
+
 			Xamarin.Insights.HasPendingCrashReport += (sender, isStartupCrash) =>
 			{
 				if (isStartupCrash) 
@@ -44,11 +48,6 @@ namespace MyExpenses.Droid
 
 			int densityDpi = (int)(Resources.DisplayMetrics.Density * 160f);
 			Console.WriteLine ("DPI: " + densityDpi);
-
-			//Need https://bugzilla.xamarin.com/show_bug.cgi?id=36907 to be resolved for AppCompatActivityjason
-			FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
-			FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
-
 
 			LoadApplication (new App ());
 		}
