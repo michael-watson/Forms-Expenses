@@ -20,7 +20,7 @@ namespace MyExpenses.Pages
 			NavigationPage.SetTitleIcon (this, "icon.png");
 			ViewModel = new ReportsPageViewModel ();
 			BindingContext = ViewModel;
-			StyleId = "reportsPage";
+			AutomationId = "reportsPage";
 			Title = "My Expense Reports";
 			Content = list;
 
@@ -40,15 +40,15 @@ namespace MyExpenses.Pages
 			base.ConstructUI ();
 
 			list = new ReportListView { 
-				StyleId = "reportListView",
+				AutomationId = "reportListView",
 				IsPullToRefreshEnabled = true,
 				RefreshCommand = new Command (() => {
 					ViewModel.RefreshData ();
 					list.IsRefreshing = false;
 				})
 			};
-			addReport = new ToolbarItem { StyleId = "addReport", Icon = "Plus_Add.png" };
-			filterIcon = new ToolbarItem { StyleId = "filterReports", Icon = "filter.png" };
+			addReport = new ToolbarItem { AutomationId = "addReport", Icon = "Plus_Add.png" };
+			filterIcon = new ToolbarItem { AutomationId = "filterReports", Icon = "filter.png" };
 		}
 
 		public override void AddChildrenToParentLayout ()

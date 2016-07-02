@@ -16,7 +16,7 @@ namespace MyExpenses.Pages
 	{
 		public LoginPage ()
 		{
-			StyleId = "loginPage";
+			AutomationId = "loginPage";
 		}
 
 		public bool TouchIdSuccess {

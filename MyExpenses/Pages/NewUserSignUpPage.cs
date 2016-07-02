@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 using MyLoginUI.Views;
 
-using MyExpenses.Views;
+//using MyExpenses.Views;
 using MyExpenses.Interfaces;
 
 namespace MyExpenses.Pages
@@ -26,7 +26,7 @@ namespace MyExpenses.Pages
 
 			usernameEntry = new Entry {
 				Style = (Style)App.Current.Resources ["underlinedEntry"],
-				StyleId = "newUsernameEntry", 
+				AutomationId = "newUsernameEntry", 
 				Placeholder = "Username",
 				HorizontalOptions = LayoutOptions.Fill,
 				HorizontalTextAlignment = TextAlignment.End
@@ -34,7 +34,7 @@ namespace MyExpenses.Pages
 
 			passwordEntry = new Entry {
 				Style = (Style)App.Current.Resources ["underlinedEntry"],
-				StyleId = "newPasswordEntry", 
+				AutomationId = "newPasswordEntry", 
 				Placeholder = "Password",
 				IsPassword = true,
 				HorizontalOptions = LayoutOptions.Fill,
@@ -44,14 +44,14 @@ namespace MyExpenses.Pages
 
 			saveUsernameButton = new Button {
 				Style = (Style)App.Current.Resources ["borderedButton"],
-				StyleId = "saveUsernameButton",
+				AutomationId = "saveUsernameButton",
 				Text = "Save Username",
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.EndAndExpand
 			};
 			cancelButton = new Button {
 				Style = (Style)App.Current.Resources ["borderedButton"],
-				StyleId = "cancelButton",
+				AutomationId = "cancelButton",
 				Text = "Cancel",
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.End

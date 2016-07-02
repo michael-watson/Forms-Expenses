@@ -68,7 +68,7 @@ namespace MyExpenses.Pages
 
 			dashboard = new RelativeLayout ();
 			reportName = new Entry {
-				StyleId = "reportNameEntry",
+				AutomationId = "reportNameEntry",
 				Style = (Style)App.Current.Resources ["underlinedEntry"],
 				FontSize = Device.OnPlatform (20, 14, 14),
 			};
@@ -78,19 +78,19 @@ namespace MyExpenses.Pages
 
 			submitButton = new Button {
 				Style = (Style)App.Current.Resources ["borderedButton"],
-				StyleId = "submitReportButton",
+				AutomationId = "submitReportButton",
 				Text = "Submit Report",
 				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
 			deleteButton = new Button {
 				Style = (Style)App.Current.Resources ["borderedButton"],
-				StyleId = "deleteReportButton",
+				AutomationId = "deleteReportButton",
 				Text = "Delete Report",
 				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
-			editNameImage = new Image { StyleId = "editNameButton", Aspect = Aspect.AspectFill };
+			editNameImage = new Image { AutomationId = "editNameButton", Aspect = Aspect.AspectFill };
 
-			expenseList = new ExpenseListView { StyleId = "expenseListView" };
+			expenseList = new ExpenseListView { AutomationId = "expenseListView" };
 
 			listHeader = new Label { Style = (Style)App.Current.Resources ["whiteTextLabel"] };
 			expenseList.Header = new ContentView {
@@ -98,7 +98,7 @@ namespace MyExpenses.Pages
 				Padding = new Thickness (10, 0, 0, 0)
 			};
 
-			addExpense = new ToolbarItem { StyleId = "addExpenseButton", Text = "Add Expense" };
+			addExpense = new ToolbarItem { AutomationId = "addExpenseButton", Text = "Add Expense" };
 
 			layout = new StackLayout {
 				Padding = new Thickness (0, 0, 0, 10),

@@ -55,7 +55,7 @@ namespace MyExpenses.Pages
 			dashboard = new RelativeLayout ();
 			reportName = new Entry {
 				Style = (Style)App.Current.Resources["underlinedEntry"],
-				StyleId = "reportNameEntry",
+				AutomationId = "reportNameEntry",
 				FontSize = 20,
 				Placeholder = "Report Name"
 			};
@@ -64,18 +64,18 @@ namespace MyExpenses.Pages
 
 			saveReportButton = new Button { 
 				Style = (Style)App.Current.Resources["borderedButton"],
-				StyleId = "saveReportButton", 
+				AutomationId = "saveReportButton", 
 				Text = "Save Report", 
 				HorizontalOptions = LayoutOptions.CenterAndExpand 
 			};
 			cancelReportButton = new Button { 
 				Style = (Style)App.Current.Resources["borderedButton"],
-				StyleId = "cancelButton", 
+				AutomationId = "cancelButton", 
 				Text = "Cancel", 
 				HorizontalOptions = LayoutOptions.CenterAndExpand 
 			};
 
-			expenseList = new ExpenseListView { StyleId = "expenseListView" };
+			expenseList = new ExpenseListView { AutomationId = "expenseListView" };
 
 			listHeader = new Label { Style = (Style)App.Current.Resources["whiteTextLabel"], Text = "Expenses" };
 			expenseList.Header = new ContentView {
@@ -83,7 +83,7 @@ namespace MyExpenses.Pages
 				Padding = new Thickness (10, 0, 0, 0)
 			};
 
-			addExpense = new ToolbarItem { StyleId = "addExpense", Text = "Add Expense" };
+			addExpense = new ToolbarItem { AutomationId = "addExpense", Text = "Add Expense" };
 		}
 
 		public override void AddChildrenToParentLayout ()
