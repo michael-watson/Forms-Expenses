@@ -29,8 +29,8 @@ namespace MyExpenses.iOS
 			global::Xamarin.Forms.Forms.Init ();//d
 
 			Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) => {
-				if (null != e.View.StyleId)
-					e.NativeView.AccessibilityIdentifier = e.View.StyleId;	
+				if (null != e.View.AutomationId)
+					e.NativeView.AccessibilityIdentifier = e.View.AutomationId;	
 			};
 
 			reportDatabase = new ReportDatabase ();

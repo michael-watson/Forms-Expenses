@@ -71,28 +71,28 @@ namespace MyLoginUI.Pages
 			};
 			loginEntry = new LoginEntry
 			{
-				StyleId = "usernameEntry",
+				AutomationId = "usernameEntry",
 				Placeholder = "Username",
 			};
 			passwordEntry = new LoginEntry
 			{
-				StyleId = "passwordEntry",
+				AutomationId = "passwordEntry",
 				Placeholder = "Password",
 				IsPassword = true,
 			};
 			loginButton = new LoginButton(Borders.Thin)
 			{
-				StyleId = "loginButton",
+				AutomationId = "loginButton",
 				Text = "Login",
 			};
 			newUserSignUpButton = new LoginButton(Borders.None)
 			{
-				StyleId = "newUserButton",
+				AutomationId = "newUserButton",
 				Text = "Sign-up",
 			};
 			forgotPasswordButton = new LoginButton(Borders.None)
 			{
-				StyleId = "forgotPasswordButton",
+				AutomationId = "forgotPasswordButton",
 				Text = "Forgot Password?",
 			};
 			rememberMe = new Label
@@ -107,7 +107,7 @@ namespace MyLoginUI.Pages
 			};
 			saveUsername = new Switch
 			{
-				StyleId = "saveUsernameSwitch",
+				AutomationId = "saveUsernameSwitch",
 				IsToggled = true,
 				Opacity = 0
 			};

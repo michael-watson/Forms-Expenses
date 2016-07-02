@@ -139,43 +139,43 @@ namespace MyExpenses.Pages
 
 			nameEntry = new Entry { 
 				Style = (Style)App.Current.Resources ["underlinedEntry"],
-				StyleId = "expenseNameEntry", 
+				AutomationId = "expenseNameEntry", 
 				HorizontalTextAlignment = TextAlignment.End, 
 				PlaceholderColor = Color.FromHex ("#E8E8E8"), 
 				Placeholder = "Vendor Name" 
 			};
 			shortDescriptionEntry = new Entry { 
 				Style = (Style)App.Current.Resources ["underlinedEntry"], 
-				StyleId = "shortDescriptionEntry", 
+				AutomationId = "shortDescriptionEntry", 
 				HorizontalTextAlignment = TextAlignment.End 
 			};
 			priceEntry = new Entry { 
 				Style = (Style)App.Current.Resources ["underlinedEntry"],
-				StyleId = "priceEntry", 
+				AutomationId = "priceEntry", 
 				HorizontalTextAlignment = TextAlignment.End, 
 				Keyboard = Keyboard.Numeric, 
 				PlaceholderColor = Color.FromHex ("#E8E8E8"), 
 				Placeholder = "$0.00" 
 			};
 			date = new ExpenseDatePicker { 
-				StyleId = "expenseDatePicker", 
+				AutomationId = "expenseDatePicker", 
 				HorizontalOptions = LayoutOptions.End 
 			};
 
 			saveButton = new Button { 
 				Style = (Style)App.Current.Resources ["borderedButton"],
-				StyleId = "saveExpenseButton", 
+				AutomationId = "saveExpenseButton", 
 				Text = "Save", 
 				VerticalOptions = LayoutOptions.End 
 			};
 			cancelButton = new Button { 
 				Style = (Style)App.Current.Resources ["borderedButton"],
-				StyleId = "cancelExpenseButton", 
+				AutomationId = "cancelExpenseButton", 
 				Text = "Cancel", 
 				VerticalOptions = LayoutOptions.EndAndExpand 
 			};
 			addReceipt = new Image { 
-				StyleId = "addReceiptButton",
+				AutomationId = "addReceiptButton",
 				Source = "ic_insert_photo_white_48dp.png"
 			};
 
@@ -257,7 +257,7 @@ namespace MyExpenses.Pages
 				if (ViewModel.IsEditable) {
 					Button deleteButton = new Button { 
 						Style = (Style)App.Current.Resources ["borderedButton"],
-						StyleId = "expenseDeleteButton", 
+						AutomationId = "expenseDeleteButton", 
 						Text = "Delete" 
 					};
 
