@@ -90,8 +90,8 @@ namespace MyExpenses.Pages
 		{
 			base.AddChildrenToParentLayout ();
 
-			Func<RelativeLayout, double> getReportTotalWidth = (p) => reportTotal.GetSizeRequest(dashboard.Width, dashboard.Height).Request.Width;
-			Func<RelativeLayout, double> getStatusWidth = (p) => status.GetSizeRequest(dashboard.Width, dashboard.Height).Request.Width;
+			Func<RelativeLayout, double> getReportTotalWidth = (p) => reportTotal.Measure(dashboard.Width, dashboard.Height).Request.Width;
+			Func<RelativeLayout, double> getStatusWidth = (p) => status.Measure(dashboard.Width, dashboard.Height).Request.Width;
 
 			dashboard.Children.Add(
 				reportName,
