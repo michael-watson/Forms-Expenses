@@ -134,12 +134,12 @@ namespace MyLoginUI.Pages
 
 		void AddConstraintsToChildren()
 		{
-			Func<RelativeLayout, double> getNewUserButtonWidth = (p) => newUserSignUpButton.GetSizeRequest(layout.Width, layout.Height).Request.Width;
-			Func<RelativeLayout, double> getForgotButtonWidth = (p) => forgotPasswordButton.GetSizeRequest(layout.Width, layout.Height).Request.Width;
-			Func<RelativeLayout, double> getLogoSloganWidth = (p) => logoSlogan.GetSizeRequest(layout.Width, layout.Height).Request.Width;
-			Func<RelativeLayout, double> getRememberMeWidth = (p) => rememberMe.GetSizeRequest(layout.Width, layout.Height).Request.Width;
-			Func<RelativeLayout, double> getRememberMeHeight = (p) => rememberMe.GetSizeRequest(layout.Width, layout.Height).Request.Height;
-			Func<RelativeLayout, double> getSwitchWidth = (p) => saveUsername.GetSizeRequest(layout.Width, layout.Height).Request.Width;
+			Func<RelativeLayout, double> getNewUserButtonWidth = (p) => newUserSignUpButton.Measure(layout.Width, layout.Height).Request.Width;
+			Func<RelativeLayout, double> getForgotButtonWidth = (p) => forgotPasswordButton.Measure(layout.Width, layout.Height).Request.Width;
+			Func<RelativeLayout, double> getLogoSloganWidth = (p) => logoSlogan.Measure(layout.Width, layout.Height).Request.Width;
+			Func<RelativeLayout, double> getRememberMeWidth = (p) => rememberMe.Measure(layout.Width, layout.Height).Request.Width;
+			Func<RelativeLayout, double> getRememberMeHeight = (p) => rememberMe.Measure(layout.Width, layout.Height).Request.Height;
+			Func<RelativeLayout, double> getSwitchWidth = (p) => saveUsername.Measure(layout.Width, layout.Height).Request.Width;
 
 			layout.Children.Add(
 				logo,
