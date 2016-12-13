@@ -20,8 +20,8 @@ namespace MyExpenses.UITests
 
 			return ConfigureApp
 				.iOS
-				.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/MyExpenses.iOS.app")
-				.DeviceIdentifier ("001DA256-27C4-4B89-ABB5-9E8E9226E3A4")
+				.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/MyExpensesiOS.app")
+//				.DeviceIdentifier ("001DA256-27C4-4B89-ABB5-9E8E9226E3A4")
 //				.DeviceIdentifier ("XTC API Key")
 //				.InstalledApp ("com.michaelwatson.myexpenses")
 				.EnableLocalScreenshots ()
