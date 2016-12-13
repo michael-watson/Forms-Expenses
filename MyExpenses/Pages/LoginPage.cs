@@ -33,8 +33,6 @@ namespace MyExpenses.Pages
 
 		public override async void Login (string userName, string passWord, bool saveUserName)
 		{
-			base.Login (userName, passWord, saveUserName);
-
 			var success = await DependencyService.Get<ITouchId> ().CheckLogin (userName, passWord);
 			if (success) {
 				var insightsDict = new Dictionary<string, string> { 
@@ -73,7 +71,6 @@ namespace MyExpenses.Pages
 
 		public override void NewUserSignUp ()
 		{
-			base.NewUserSignUp ();
 			Navigation.PushModalAsync (new NewUserSignUpPage ());
 		}
 
@@ -94,13 +91,16 @@ namespace MyExpenses.Pages
 
 		public override void RunAfterAnimation ()
 		{
-			base.RunAfterAnimation ();
-
 			if (App.UserName != null)
 				SetUsernameEntry (App.UserName);
 
 			if (Device.OS == TargetPlatform.iOS && !App.XTCAgent)
 				DependencyService.Get<ITouchId> ().AuthenticateWithTouchId (this);
+		}
+
+		public override void ForgotPassword()
+		{
+			//ToDo
 		}
 	}
 }

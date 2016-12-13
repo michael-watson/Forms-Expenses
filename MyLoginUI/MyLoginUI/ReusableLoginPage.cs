@@ -8,7 +8,7 @@ using MyLoginUI.Views;
 
 namespace MyLoginUI.Pages
 {
-	public class ReusableLoginPage : ContentPage
+	public abstract class ReusableLoginPage : ContentPage
 	{
 		#region LoginPage Properties
 
@@ -198,23 +198,15 @@ namespace MyLoginUI.Pages
 
 		#endregion
 
-		#region Virual Methods to Expose Override Methods
+		#region Abstract Methods to Expose Override Methods
 
-		public virtual void RunAfterAnimation()
-		{
-		}
+		public abstract void RunAfterAnimation();
 
-		public virtual void Login(string userName, string passWord, bool saveUserName)
-		{
-		}
+		public abstract void Login(string userName, string passWord, bool saveUserName);
 
-		public virtual void NewUserSignUp()
-		{
-		}
+		public abstract void NewUserSignUp();
 
-		public virtual void ForgotPassword()
-		{
-		}
+		public abstract void ForgotPassword();
 
 		#endregion
 
