@@ -42,5 +42,7 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>MyExpenses</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Use the camera to capture your receipts</string>
 </dict>
 </plist>
